@@ -1,1 +1,7 @@
-# BDSA2017.Assignment08
+# Assignment #8: Week 42
+
+## Software Engineering
+
+### Exercise 1
+
+## C&#35;
