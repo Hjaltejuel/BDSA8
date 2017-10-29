@@ -1,15 +1,13 @@
-﻿
-using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
 namespace BDSA2017.Assignment08.UWP.Tests
 {
-    [TestClass]
-    public class UnitTest1
+    public class UnitTest
     {
-        [TestMethod]
-        public void TestMethod1()
+        [Fact]
+        public void TestMethod()
         {
+            Assert.True(false);
         }
     }
 }
