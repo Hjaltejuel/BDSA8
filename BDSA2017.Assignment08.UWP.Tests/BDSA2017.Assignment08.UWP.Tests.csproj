@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{7A7FDEE7-72A0-434C-BB0B-8F2B455BDAD8}</ProjectGuid>
+    <ProjectGuid>{BA629CCC-6BE0-4513-A74F-E3A9A5E73A05}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BDSA2017.Assignment08.UWP.Tests</RootNamespace>
@@ -99,7 +99,7 @@
     <Compile Include="UnitTestApp.xaml.cs">
       <DependentUpon>UnitTestApp.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UnitTest.cs" />
+    <Compile Include="ViewModels\MainPageViewModelTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="UnitTestApp.xaml">
@@ -127,6 +127,9 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.0.1</Version>
     </PackageReference>
+    <PackageReference Include="Moq">
+      <Version>4.7.142</Version>
+    </PackageReference>
     <PackageReference Include="MSTest.TestAdapter">
       <Version>1.2.0</Version>
     </PackageReference>
@@ -136,17 +139,17 @@
     <PackageReference Include="xunit">
       <Version>2.3.1</Version>
     </PackageReference>
+    <PackageReference Include="xunit.runner.devices">
+      <Version>2.3.0</Version>
+    </PackageReference>
     <PackageReference Include="xunit.runner.visualstudio">
       <Version>2.3.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BDSA2017.Assignment08.UWP\BDSA2017.Assignment08.UWP.csproj">
-      <Project>{357668fe-c34f-491e-9487-e82035102de0}</Project>
-      <Name>BDSA2017.Assignment08.UWP</Name>
+    <ProjectReference Include="..\BDSA2017.Assignment08.UWP.Lib\BDSA2017.Assignment08.UWP.Lib.csproj">
+      <Project>{0d77cc78-f88c-4c05-a0da-6d105d0d07fe}</Project>
+      <Name>BDSA2017.Assignment08.UWP.Lib</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

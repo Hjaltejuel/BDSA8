@@ -47,4 +47,7 @@ Implementation should use an IoC container to load the view model and dependenci
 Currently there is a known bug with the Test Explorer and UWP apps targeting the *Windows 10 Fall Creators Update*.
 The bug is expected to be fixed with the release of Visual Studio 2017 Version 15.5.
 
-Running tests in the current setup will be demonstrated in the next lecture.
+<https://developercommunity.visualstudio.com/content/problem/132969/uwp-unit-tests-not-show-when-target-platform-min-v.html>
+
+To discover and/or run the tests in UWP.Tests you will have to launch the UWP.Tests app.
+The UWP.Tests app cannot reference the UWP app so all code that needs testing (minimum View Models) must be placed in the UWP.Lib project.
