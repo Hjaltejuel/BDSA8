@@ -19,6 +19,9 @@ You are designing the access control policies for a Web-based retail store. Cust
 
 ### Exercise 5
 Select a control flow mechanism you find most appropriate for each of the following systems. Because multiple choices are possible in most cases, justify your choices.
+- a Web server designed to sustain high loads
+- a graphical user interface for a word processor
+- a real-time embedded system (e.g., a guidance system on a satellite launcher)
 
 
 ### Exercise 6
