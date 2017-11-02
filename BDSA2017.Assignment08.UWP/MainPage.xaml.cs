@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Microsoft.Extensions.DependencyInjection;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -32,17 +33,7 @@ namespace BDSA2017.Assignment08.UWP
         {
             InitializeComponent();
 
-            var connectionString = @"Data Source=slotcars.db";
-
-            var builder = new DbContextOptionsBuilder<SlotCarContext>();
-            builder.UseSqlite(connectionString);
-
-            var context = new SlotCarContext(builder.Options);
-            context.Database.EnsureCreatedAsync().Wait();
-
-            var repository = new TrackRepository(context);
-
-            _vm = new MainPageViewModel(repository);
+            _vm = App.ServiceProvider.GetService<MainPageViewModel>();
 
             DataContext = _vm;
         }

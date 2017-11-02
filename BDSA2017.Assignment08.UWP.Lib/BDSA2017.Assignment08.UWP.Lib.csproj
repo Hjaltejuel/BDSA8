@@ -106,10 +106,12 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Models\IoCContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
+    <Compile Include="ViewModels\TrackPageViewModel.cs" />
     <Compile Include="ViewModels\TrackViewModel.cs" />
     <EmbeddedResource Include="Properties\BDSA2017.Assignment08.UWP.Lib.rd.xml" />
   </ItemGroup>

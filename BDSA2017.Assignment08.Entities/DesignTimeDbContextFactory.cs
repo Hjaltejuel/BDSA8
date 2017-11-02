@@ -7,10 +7,10 @@ namespace BDSA2017.Assignment08.Entities
     {
         public SlotCarContext CreateDbContext(string[] args)
         {
-            var connectionString = @"Data Source=slotcars.db";
+            var connectionString = @"Server=(localdb)\mssqllocaldb;Database=SlotCarTournament;Trusted_Connection=True;MultipleActiveResultSets=true";
 
             var builder = new DbContextOptionsBuilder<SlotCarContext>();
-            builder.UseSqlite(connectionString);
+            builder.UseSqlServer(connectionString);
 
             return new SlotCarContext(builder.Options);
         }
