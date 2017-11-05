@@ -21,13 +21,14 @@ namespace BDSA2017.Assignment08.UWP.ViewModels
             
         }
 
-        public void EmptyAndAdd(TrackViewModel model)
+        public async void EmptyAndAdd(int id)
         {
             foreach(TrackViewModel view in Track.ToList())
             {
                 Track.Remove(view);
             }
-            Track.Add(model);
+            var temp =await  _repository.Find(id);
+            Track.Add(new TrackViewModel() {Id = temp.Id, LengthInMeters = temp.LengthInMeters, MaxCars = temp.MaxCars, name = temp.Name });
         }
 
 

@@ -33,20 +33,24 @@ namespace BDSA2017.Assignment08.UWP.ViewModels
         {
 
            
-            var query = from t in _repository.Read()
-                         select new TrackViewModel
-                         {
-                             Id = t.Id,
-                             name = t.Name,
-                             LengthInMeters = t.LengthInMeters,
-                             MaxCars = t.MaxCars
-                         };
+                var query = from t in _repository.Read()
+                             select new TrackViewModel
+                             {
+                                 Id = t.Id,
+                                 name = t.Name,
+                                 LengthInMeters = t.LengthInMeters,
+                                 MaxCars = t.MaxCars
+                             };
+            /*
             await _repository.Create(new TrackCreateDTO() { Name = "Hello", LengthInMeters = 100, MaxCars = 50 });
             await _repository.Create(new TrackCreateDTO() { Name = "This", LengthInMeters = 150, MaxCars = 52 });
             await _repository.Create(new TrackCreateDTO() { Name = "Is", LengthInMeters = 200, MaxCars = 512 });
             await _repository.Create(new TrackCreateDTO() { Name = "A", LengthInMeters = 250, MaxCars = 5214 });
             await _repository.Create(new TrackCreateDTO() { Name = "Test", LengthInMeters = 300, MaxCars = 121 });
-            var tracks = await query.ToListAsync();
+            */
+            //Run this first time to initiate db with items
+
+            var tracks = query.ToList();
     
             /*
             var list = new List<TrackViewModel>();

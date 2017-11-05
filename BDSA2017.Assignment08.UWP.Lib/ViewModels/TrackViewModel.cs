@@ -27,18 +27,23 @@ namespace BDSA2017.Assignment08.UWP.ViewModels
             set { if (_LengthInMeters != value) { _LengthInMeters = value; OnPropertyChanged(); } }
         }
 
-        public long? _BestLapInTicks
-        {
-            get => _BestLapInTicks;
-            set { if (_BestLapInTicks != value) { _BestLapInTicks = value; OnPropertyChanged(); } }
-        }
-        public long? BestLapInTicks { get; set; }
-
+       
         public int _MaxCars;
         public int MaxCars
         {
             get => _MaxCars;
             set { if (_MaxCars != value) { _MaxCars = value; OnPropertyChanged(); } }
+        }
+
+        public override bool Equals(object obj)
+        {
+            var item = obj as TrackViewModel;
+
+            if (Id == item.Id && name.Equals(item.name) && LengthInMeters == item.LengthInMeters && MaxCars == item.MaxCars)
+            {
+                return true;
+            }
+            else return false;
         }
     }
 }

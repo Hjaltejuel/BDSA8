@@ -53,10 +53,7 @@ namespace BDSA2017.Assignment08.Models
         public IQueryable<TrackDTO> Read()
             
         {
-            _context.Tracks.ToList();
-            foreach (var entity in _context.Tracks)
-                _context.Tracks.Remove(entity);
-            _context.SaveChangesAsync();
+          
             return from t in _context.Tracks
                   select new TrackDTO
                   {

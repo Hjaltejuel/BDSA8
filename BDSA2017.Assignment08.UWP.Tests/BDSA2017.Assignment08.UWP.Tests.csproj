@@ -100,6 +100,7 @@
       <DependentUpon>UnitTestApp.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\MainPageViewModelTests.cs" />
+    <Compile Include="ViewModels\TrackPageViewModelTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="UnitTestApp.xaml">
@@ -153,6 +154,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BDSA2017.Assignment08.Models\BDSA2017.Assignment08.Models.csproj">
+      <Project>{188c6199-e0c3-451d-b34e-b7f8d3190fd8}</Project>
+      <Name>BDSA2017.Assignment08.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BDSA2017.Assignment08.UWP.Lib\BDSA2017.Assignment08.UWP.Lib.csproj">
       <Project>{0d77cc78-f88c-4c05-a0da-6d105d0d07fe}</Project>
       <Name>BDSA2017.Assignment08.UWP.Lib</Name>
